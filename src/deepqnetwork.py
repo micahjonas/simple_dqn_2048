@@ -42,14 +42,14 @@ class DeepQNetwork:
     self.cost = GeneralizedCost(costfunc = SumSquared())
     self.model.initialize(self.input_shape[:-1], self.cost)
     if args.optimizer == 'rmsprop':
-      self.optimizer = RMSProp(learning_rate = args.learning_rate, 
-          decay_rate = args.decay_rate, 
+      self.optimizer = RMSProp(learning_rate = args.learning_rate,
+          decay_rate = args.decay_rate,
           stochastic_round = args.stochastic_round)
     elif args.optimizer == 'adam':
-      self.optimizer = Adam(learning_rate = args.learning_rate, 
+      self.optimizer = Adam(learning_rate = args.learning_rate,
           stochastic_round = args.stochastic_round)
     elif args.optimizer == 'adadelta':
-      self.optimizer = Adadelta(decay = args.decay_rate, 
+      self.optimizer = Adadelta(decay = args.decay_rate,
           stochastic_round = args.stochastic_round)
     else:
       assert false, "Unknown optimizer"
@@ -71,11 +71,13 @@ class DeepQNetwork:
     init_norm = Gaussian(loc=0.0, scale=0.01)
     layers = []
     # The first hidden layer convolves 32 filters of 8x8 with stride 4 with the input image and applies a rectifier nonlinearity.
-    layers.append(Conv((8, 8, 32), strides=4, init=init_norm, activation=Rectlin()))
+    layers.append(Conv((2, 2, 128), strides=1, init=init_norm, activation=Rectlin()))
     # The second hidden layer convolves 64 filters of 4x4 with stride 2, again followed by a rectifier nonlinearity.
-    layers.append(Conv((4, 4, 64), strides=2, init=init_norm, activation=Rectlin()))
+    layers.append(Conv((2, 2, 128), strides=1, init=init_norm, activation=Rectlin()))
     # This is followed by a third convolutional layer that convolves 64 filters of 3x3 with stride 1 followed by a rectifier.
-    layers.append(Conv((3, 3, 64), strides=1, init=init_norm, activation=Rectlin()))
+    #layers.append(Conv((3, 3, 64), strides=1, init=init_norm, activation=Rectlin()))
+    # The final hidden layer is fully-connected and consists of 512 rectifier units.
+    layers.append(Affine(nout=512, init=init_norm, activation=Rectlin()))
     # The final hidden layer is fully-connected and consists of 512 rectifier units.
     layers.append(Affine(nout=512, init=init_norm, activation=Rectlin()))
     # The output layer is a fully-connected linear layer with a single output for each valid action.

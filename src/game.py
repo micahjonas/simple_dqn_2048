@@ -25,6 +25,7 @@ class Game(object):
         self.addTile()
         self.addTile()
         self.score = 0
+        self.nomove = 0
 
     def size(self):
         """return the board size"""
@@ -32,7 +33,11 @@ class Game(object):
 
     def score(self):
         """return the score"""
-        return self.__size
+        return self.score
+
+    def nomove(self):
+        """return the score"""
+        return self.nomove
 
     def canMove(self):
         """
@@ -83,7 +88,11 @@ class Game(object):
             return int(np.log2(number))
 
     def getCellsLog2(self):
-        return [[self.__transform(x) for x in line] for line in self.cells]
+        nparr = np.array(self.cells)
+        nparr = np.log2(nparr)
+        nparr[np.isneginf(nparr)] = 0
+        return nparr.astype("uint8")
+        #return [[self.__transform(x) for x in line] for line in self.cells]
 
     def getCell(self, x, y):
         """return the cell value at x,y"""
@@ -165,6 +174,7 @@ class Game(object):
         self.addTile()
         self.addTile()
         self.score = 0
+        self.nomove = 0
 
     def move(self, d, add_tile=True):
         """
@@ -195,6 +205,7 @@ class Game(object):
             # did it change?
             if origin != new:
                 moved = True
+                self.nomove += 1
             scoreOfRound += pts
 
         self.score += scoreOfRound
@@ -204,3 +215,11 @@ class Game(object):
             self.addTile()
 
         return scoreOfRound
+
+    def cellsToString(self, cells):
+        res = ""
+        for line in cells:
+            res += " ".join(map(str, line))
+            res += "\n"
+
+        return res

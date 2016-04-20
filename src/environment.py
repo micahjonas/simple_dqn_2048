@@ -8,11 +8,13 @@ logger = logging.getLogger(__name__)
 class Environment:
   def __init__(self, rom_file, args):
     self.game = Game()
-    if args.display_screen:
+
+    #if args.display_screen:
+
       # DO SOME VISUALISATION
 
-    if args.random_seed:
-      self.ale.setInt('random_seed', args.random_seed)
+    #if args.random_seed:
+      #self.ale.setInt('random_seed', args.random_seed)
 
     self.actions = self.game.getActionSet()
     logger.info("Using full action set with size %d" % len(self.actions))
@@ -33,9 +35,17 @@ class Environment:
     return reward
 
   def getScreen(self):
-    for line in self.game.getCellsLog2()
-        line = line.map()
-    return
+    return self.game.getCellsLog2()
 
   def isTerminal(self):
-    return not self.game.canMove()
+    if(self.game.canMove()):
+        return False
+    else:
+        #print "Game ended!"
+        #print "Score:"
+        #print self.game.score
+        #print "Number of moves: "
+        #print self.game.nomove
+        #print "Cells"
+        #print self.game.cellsToString(self.game.getCells())
+        return True
