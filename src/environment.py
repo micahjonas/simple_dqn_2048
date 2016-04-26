@@ -3,6 +3,7 @@ import os
 from game import Game
 import cv2
 import logging
+import numpy as np
 logger = logging.getLogger(__name__)
 
 class Environment:
@@ -35,7 +36,7 @@ class Environment:
     return reward
 
   def getScreen(self):
-    return self.game.getCellsLog2()
+    return np.lib.pad(self.game.getCellsLog2(), ((1,1),(1,1)),'constant', constant_values=(0))
 
   def isTerminal(self):
     if(self.game.canMove()):

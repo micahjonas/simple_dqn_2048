@@ -2,7 +2,13 @@
 
 This Project uses the Simple DQN framework to train an AI to play 2048.
 
+## Branch v2
 
+In this version there where some more changes made to the Simple DQN framework to improve it's effectivness with 2048.
+
+ * Added a padding with zeros to the screens to make more cnn layers possible (4x4) --> (6x6)
+ * Changed the first cnn layer to 3x3 which results in 4x4 grid as the inital games
+ * Added two layers of 2x2 cnns and two layers fully connected layers with each 4096 neurons
 
 # Simple DQN
 

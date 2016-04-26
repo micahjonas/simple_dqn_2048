@@ -20,7 +20,7 @@ def log2(cells):
 
 game = Game()
 
-print cellsToString(game.getCells())
+print cellsToString(np.lib.pad(game.getCellsLog2(), ((1,1),(1,1)),'constant', constant_values=(0)))
 
 while game.canMove():
     #move = raw_input("Enter move [0-3]: ")

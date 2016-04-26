@@ -213,6 +213,7 @@ class Game(object):
         # don't add a new tile if nothing changed
         if moved and add_tile:
             self.addTile()
+            #print self.cellsToString(self.getCells())
 
         return scoreOfRound
 
