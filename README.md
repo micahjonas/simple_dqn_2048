@@ -1,3 +1,9 @@
+# Using Simple DQN to play 2048
+
+This Project uses the Simple DQN framework to train an AI to play 2048.
+
+
+
 # Simple DQN
 
 Deep Q-learning agent for replicating DeepMind's results in paper ["Human-level control through deep reinforcement learning"](http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html). It is designed to be simple, fast and easy to extend. In particular:
@@ -105,7 +111,7 @@ There are plethora of options, just run `./train.sh --help` to see them. While t
 
 ### Resuming training
 
-You can resume training by running 
+You can resume training by running
 ```
 ./train.sh roms/breakout.bin --load_weights snapshots/breakout_10.pkl
 ```
@@ -152,9 +158,9 @@ To produce filter visualizations with guided backpropagation:
 
 What the filter visualization does:
 
-1. first it plays one game to produce a set of states (one state is 4 frames), 
+1. first it plays one game to produce a set of states (one state is 4 frames),
 2. then it finds the states which activate each filter the most,
-3. finally it carries out guided backpropagation to show which parts of the screen affect the "activeness" of each filter the most. 
+3. finally it carries out guided backpropagation to show which parts of the screen affect the "activeness" of each filter the most.
 
 The result is written to file `results/<game>.html`. By default only 4 filters from each convolutional layer are visualized. To see more filters add `--visualization_filters <nr_filters>` to the command line.
 
