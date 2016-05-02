@@ -30,10 +30,18 @@ class Environment:
   def restart(self):
     self.game.reset()
 
-  def act(self, action):
-    reward = self.game.move(self.actions[action])
+  def act(self, actions):
+    for action in reversed(actions):
+      (moved, reward) = self.game.move(self.actions[action])
+      if moved:
+        return (action, reward)
 
-    return reward
+  def startLoggingGames(self, epoch):
+      filename = "./results/games/test_v3_epoch" + str(epoch) + ".csv"
+      self.game.startLogging(filename)
+
+  def stopLoggingGames(self):
+      self.game.stopLogging()
 
   def getScreen(self):
     return np.lib.pad(self.game.getCellsLog2(), ((1,1),(1,1)),'constant', constant_values=(0))

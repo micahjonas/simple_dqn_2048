@@ -30,12 +30,15 @@ class Agent:
     self.env.restart()
     # perform random number of dummy actions to produce more stochastic games
     for i in xrange(random.randint(self.history_length, self.random_starts) + 1):
-      reward = self.env.act(0)
+      actions = range(self.num_actions)
+      random.shuffle(actions)
+      (resultAction, reward) = self.env.act(actions)
+      #reward = self.env.act(0)
       screen = self.env.getScreen()
       terminal = self.env.isTerminal()
       assert not terminal, "terminal state occurred during random initialization"
       # add dummy states to buffer to guarantee history_length screens
-      self.mem.add(0, reward, screen, terminal)
+      self.mem.add(resultAction, reward, screen, terminal)
 
   def _exploration_rate(self):
     # calculate decaying exploration rate
@@ -47,8 +50,9 @@ class Agent:
   def step(self, exploration_rate):
     # exploration rate determines the probability of random moves
     if random.random() < exploration_rate:
-      action = random.randrange(self.num_actions)
-      logger.debug("Random action = %d" % action)
+      actions = range(self.num_actions)
+      random.shuffle(actions)
+      #logger.debug("Random action = %d" % actions)
     else:
       # otherwise choose action with highest Q-value
       state = self.mem.getCurrentState()
@@ -57,11 +61,17 @@ class Agent:
       qvalues = self.net.predict(state)
       assert len(qvalues[0]) == self.num_actions
       # choose highest Q-value of first state
-      action = np.argmax(qvalues[0])
-      logger.debug("Predicted action = %d" % action)
+      actions = np.argsort(qvalues[0])
+      tempBigAction = np.argmax(qvalues[0])
+      if not tempBigAction  == actions[3]:
+          print actions
+          print tempBigAction
+
+      #assert (tempBigAction  == actions[3])
+      logger.debug("Predicted action = %d" % tempBigAction)
 
     # perform the action
-    reward = self.env.act(action)
+    (resultAction, reward) = self.env.act(actions)
     screen = self.env.getScreen()
     terminal = self.env.isTerminal()
 
@@ -70,7 +80,7 @@ class Agent:
       logger.debug("Reward: %d" % reward)
 
     # add transition to buffer (otherwise we wouldn't have current state)
-    self.mem.add(action, reward, screen, terminal)
+    self.mem.add(resultAction, reward, screen, terminal)
 
     # restart the game if over
     if terminal:
@@ -79,7 +89,7 @@ class Agent:
 
     # call callback to record statistics
     if self.callback:
-      self.callback.on_step(action, reward, terminal, screen, exploration_rate)
+      self.callback.on_step(resultAction, reward, terminal, screen, exploration_rate)
 
     return terminal
 
@@ -111,10 +121,13 @@ class Agent:
   def test(self, test_steps, epoch = 0):
     # just make sure there is history_length screens to form a state
     self._restartRandom()
+    self.env.startLoggingGames(epoch)
     # play given number of steps
     for i in xrange(test_steps):
       # perform game step
       self.step(self.exploration_rate_test)
+
+    self.env.stopLoggingGames()
 
   def play(self, num_games):
     # just make sure there is history_length screens to form a state

@@ -40,6 +40,24 @@ print "Game ended"
 print game.score
 print cellsToString(game.getCells())
 
+while game.canMove():
+    #move = raw_input("Enter move [0-3]: ")
+    move = random.choice([0,1,2,3])
+    print "-------"
+    print "Move: " + str(move)
+    reward = game.move(int(move))
+    print "Reward: " + str(reward)
+    print ""
+    print cellsToString(game.getCells())
+    print ""
+    print cellsToString(game.getCellsLog2())
+    print ""
+    print "Score: " + str(game.score)
+
+print "Game ended"
+print game.score
+print cellsToString(game.getCells())
+
 print "Test Reset"
 game.reset()
 print game.score
