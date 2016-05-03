@@ -77,9 +77,9 @@ class DeepQNetwork:
     # This is followed by a third convolutional layer that convolves 64 filters of 3x3 with stride 1 followed by a rectifier.
     layers.append(Conv((2, 2, 256), strides=1, init=init_norm, activation=Rectlin()))
     # The final hidden layer is fully-connected and consists of 512 rectifier units.
-    layers.append(Affine(nout=4096, init=init_norm, activation=Rectlin()))
+    layers.append(Affine(nout=8192, init=init_norm, activation=Rectlin()))
     # The final hidden layer is fully-connected and consists of 512 rectifier units.
-    layers.append(Affine(nout=4096, init=init_norm, activation=Rectlin()))
+    #layers.append(Affine(nout=4096, init=init_norm, activation=Rectlin()))
     # The final hidden layer is fully-connected and consists of 512 rectifier units.
     #layers.append(Affine(nout=1024, init=init_norm, activation=Rectlin()))
     # The output layer is a fully-connected linear layer with a single output for each valid action.

@@ -26,6 +26,9 @@ class Game(object):
         self.addTile()
         self.score = 0
         self.nomove = 0
+        self.games = 0
+        self.isLogging = False
+        self.__statsfile = None
 
     def size(self):
         """return the board size"""
@@ -52,6 +55,14 @@ class Game(object):
                 if (x < self.__size-1 and c == self.getCell(x+1, y)) \
                    or (y < self.__size-1 and c == self.getCell(x, y+1)):
                     return True
+        if(self.isLogging):
+            self.games += 1
+            self.__statsfile.write("Runs: {}\n".format(self.games))
+            self.__statsfile.write("Score: {}\n".format(self.score))
+            self.__statsfile.write("Moves: {}\n".format(self.nomove))
+            self.__statsfile.write("Cells:\n")
+            self.__statsfile.write(self.cellsToString(self.getCells()))
+            self.__statsfile.write("\n")
 
         return False
 
@@ -175,6 +186,15 @@ class Game(object):
         self.addTile()
         self.score = 0
         self.nomove = 0
+
+    def startLogging(self, filename):
+        self.games = 0
+        self.__statsfile = open(filename, 'w')
+        self.isLogging = True
+
+    def stopLogging(self):
+        self.isLogging = False
+        self.__statsfile.close
 
     def move(self, d, add_tile=True):
         """

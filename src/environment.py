@@ -32,8 +32,14 @@ class Environment:
 
   def act(self, action):
     reward = self.game.move(self.actions[action])
-
     return reward
+
+  def startLoggingGames(self, epoch):
+      filename = "./results/games/test_v5_epoch" + str(epoch) + ".csv"
+      self.game.startLogging(filename)
+
+  def stopLoggingGames(self):
+      self.game.stopLogging()
 
   def getScreen(self):
     return np.lib.pad(self.game.getCellsLog2(), ((1,1),(1,1)),'constant', constant_values=(0))

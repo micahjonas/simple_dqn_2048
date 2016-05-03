@@ -111,10 +111,13 @@ class Agent:
   def test(self, test_steps, epoch = 0):
     # just make sure there is history_length screens to form a state
     self._restartRandom()
+    self.env.startLoggingGames(epoch)
     # play given number of steps
     for i in xrange(test_steps):
       # perform game step
       self.step(self.exploration_rate_test)
+
+    self.env.stopLoggingGames()
 
   def play(self, num_games):
     # just make sure there is history_length screens to form a state
