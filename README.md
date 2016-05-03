@@ -9,6 +9,19 @@ In this version there where some more changes made to the Simple DQN framework t
  * Added a padding with zeros to the screens to make more cnn layers possible (4x4) --> (6x6)
  * Changed the first cnn layer to 3x3 which results in 4x4 grid as the inital games
  * Added two layers of 2x2 cnns and two layers fully connected layers with each 4096 neurons
+ * Changed defaults parameters: min_reward: 0, max_reward: 65k, history_length: 8 (increase), random_starts: 10 (decrease),
+
+## Branch v3
+  * Framework is no longer able to choose steps which are doing nothing!
+  * Instead environment chooses second best move
+
+## Branch v4
+
+Is based upon branch v2 but only uses 1 layer of fully connected
+
+## Branch v5
+
+Doubles the neurons in the fully connected layer to v4.
 
 # Simple DQN
 
