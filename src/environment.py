@@ -35,14 +35,15 @@ class Environment:
     return reward
 
   def startLoggingGames(self, epoch):
-      filename = "./results/games/test_v5_epoch" + str(epoch) + ".csv"
+      filename = "./results/games/test_v6_epoch" + str(epoch) + ".csv"
       self.game.startLogging(filename)
 
   def stopLoggingGames(self):
       self.game.stopLogging()
 
   def getScreen(self):
-    return np.lib.pad(self.game.getCellsLog2(), ((1,1),(1,1)),'constant', constant_values=(0))
+    return self.game.getCellsLog2()
+    #return np.lib.pad(self.game.getCellsLog2(), ((1,1),(1,1)),'constant', constant_values=(0))
 
   def isTerminal(self):
     if(self.game.canMove()):

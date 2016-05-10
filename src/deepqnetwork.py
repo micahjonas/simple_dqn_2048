@@ -71,13 +71,13 @@ class DeepQNetwork:
     init_norm = Gaussian(loc=0.0, scale=0.01)
     layers = []
     # The first hidden layer convolves 32 filters of 8x8 with stride 4 with the input image and applies a rectifier nonlinearity.
-    layers.append(Conv((3, 3, 128), strides=1, init=init_norm, activation=Rectlin()))
+    layers.append(Conv((4, 4, 10000), strides=1, init=init_norm, activation=Rectlin()))
     # The second hidden layer convolves 64 filters of 4x4 with stride 2, again followed by a rectifier nonlinearity.
-    layers.append(Conv((2, 2, 256), strides=1, init=init_norm, activation=Rectlin()))
+    #layers.append(Conv((2, 2, 256), strides=1, init=init_norm, activation=Rectlin()))
     # This is followed by a third convolutional layer that convolves 64 filters of 3x3 with stride 1 followed by a rectifier.
-    layers.append(Conv((2, 2, 256), strides=1, init=init_norm, activation=Rectlin()))
+    #layers.append(Conv((2, 2, 256), strides=1, init=init_norm, activation=Rectlin()))
     # The final hidden layer is fully-connected and consists of 512 rectifier units.
-    layers.append(Affine(nout=8192, init=init_norm, activation=Rectlin()))
+    layers.append(Affine(nout=10000, init=init_norm, activation=Rectlin()))
     # The final hidden layer is fully-connected and consists of 512 rectifier units.
     #layers.append(Affine(nout=4096, init=init_norm, activation=Rectlin()))
     # The final hidden layer is fully-connected and consists of 512 rectifier units.
