@@ -1,0 +1,99 @@
+Runs: 1
+Score: 2080
+Moves: 384
+Cells:
+2 128 4 2
+4 16 8 4
+16 4 32 16
+4 64 128 2
+
+Runs: 2
+Score: 2432
+Moves: 431
+Cells:
+2 4 8 2
+4 16 32 4
+16 64 256 2
+2 4 2 32
+
+Runs: 3
+Score: 1412
+Moves: 308
+Cells:
+2 8 2 4
+4 32 4 2
+128 8 64 16
+2 4 32 2
+
+Runs: 4
+Score: 1916
+Moves: 387
+Cells:
+2 128 4 2
+4 8 16 4
+64 4 128 8
+4 8 4 2
+
+Runs: 5
+Score: 460
+Moves: 113
+Cells:
+2 4 2 4
+4 8 4 8
+8 4 16 64
+2 16 4 2
+
+Runs: 6
+Score: 1044
+Moves: 215
+Cells:
+4 2 8 2
+2 8 4 16
+16 32 128 2
+2 16 2 4
+
+Runs: 7
+Score: 1252
+Moves: 247
+Cells:
+2 4 8 64
+128 8 2 8
+2 32 4 2
+4 8 2 4
+
+Runs: 8
+Score: 1484
+Moves: 297
+Cells:
+2 4 8 2
+4 64 16 8
+8 128 8 4
+2 8 64 8
+
+Runs: 9
+Score: 612
+Moves: 168
+Cells:
+2 8 2 4
+8 2 16 8
+4 64 32 16
+2 16 8 2
+
+Runs: 10
+Score: 1236
+Moves: 241
+Cells:
+2 4 8 4
+4 128 16 8
+64 4 8 2
+4 16 2 8
+
+Runs: 11
+Score: 1632
+Moves: 291
+Cells:
+4 8 2 4
+32 64 4 16
+4 2 128 8
+2 16 64 4
+

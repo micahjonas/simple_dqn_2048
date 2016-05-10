@@ -1,0 +1,504 @@
+Runs: 1
+Score: 3104
+Moves: 552
+Cells:
+4 2 128 4
+16 256 8 16
+4 32 64 4
+2 4 16 2
+
+Runs: 2
+Score: 1312
+Moves: 367
+Cells:
+4 64 16 4
+2 8 4 2
+4 2 16 32
+2 128 8 2
+
+Runs: 3
+Score: 1384
+Moves: 339
+Cells:
+4 64 2 16
+2 8 32 2
+32 2 128 4
+2 4 8 2
+
+Runs: 4
+Score: 1508
+Moves: 340
+Cells:
+2 4 2 4
+8 128 16 64
+4 16 64 4
+2 8 4 2
+
+Runs: 5
+Score: 3060
+Moves: 574
+Cells:
+2 8 2 4
+32 4 8 2
+16 2 128 8
+2 256 16 64
+
+Runs: 6
+Score: 1408
+Moves: 327
+Cells:
+4 2 8 2
+16 128 32 16
+2 4 64 4
+4 32 4 2
+
+Runs: 7
+Score: 1504
+Moves: 359
+Cells:
+4 8 64 2
+2 4 128 16
+8 16 2 4
+2 8 64 2
+
+Runs: 8
+Score: 3136
+Moves: 594
+Cells:
+4 2 16 2
+32 256 128 4
+2 64 32 8
+8 2 4 2
+
+Runs: 9
+Score: 612
+Moves: 182
+Cells:
+8 2 4 2
+32 16 8 4
+8 64 16 2
+16 8 2 8
+
+Runs: 10
+Score: 1132
+Moves: 278
+Cells:
+16 2 8 4
+2 8 2 32
+8 2 128 8
+2 16 32 2
+
+Runs: 11
+Score: 3020
+Moves: 573
+Cells:
+4 2 4 16
+8 32 256 4
+2 128 64 2
+4 8 2 4
+
+Runs: 12
+Score: 420
+Moves: 126
+Cells:
+8 16 4 2
+32 2 32 4
+4 16 4 8
+2 4 16 2
+
+Runs: 13
+Score: 1568
+Moves: 358
+Cells:
+2 8 4 2
+16 64 32 4
+128 32 4 16
+2 16 2 32
+
+Runs: 14
+Score: 2988
+Moves: 550
+Cells:
+32 2 4 2
+64 4 8 128
+2 8 2 8
+16 4 256 2
+
+Runs: 15
+Score: 2472
+Moves: 537
+Cells:
+2 16 4 2
+4 32 16 256
+64 16 32 4
+2 4 2 8
+
+Runs: 16
+Score: 2784
+Moves: 573
+Cells:
+2 4 256 2
+4 16 128 4
+16 4 32 16
+2 8 4 2
+
+Runs: 17
+Score: 700
+Moves: 196
+Cells:
+16 2 8 2
+8 16 2 4
+2 32 8 32
+4 2 64 4
+
+Runs: 18
+Score: 2296
+Moves: 489
+Cells:
+4 2 8 4
+32 4 16 8
+4 8 256 2
+2 64 2 4
+
+Runs: 19
+Score: 2368
+Moves: 477
+Cells:
+4 256 8 2
+32 8 64 4
+4 32 2 8
+2 4 8 2
+
+Runs: 20
+Score: 1628
+Moves: 389
+Cells:
+2 4 2 4
+8 64 16 64
+32 128 8 4
+2 4 16 2
+
+Runs: 21
+Score: 2316
+Moves: 435
+Cells:
+4 2 16 2
+2 16 32 4
+256 2 64 16
+2 4 2 4
+
+Runs: 22
+Score: 2736
+Moves: 487
+Cells:
+8 2 8 2
+2 128 256 4
+4 2 8 32
+2 16 2 8
+
+Runs: 23
+Score: 1092
+Moves: 293
+Cells:
+4 2 4 2
+8 16 32 4
+32 2 4 8
+2 8 128 2
+
+Runs: 24
+Score: 1436
+Moves: 370
+Cells:
+2 32 4 2
+8 128 8 4
+16 32 64 8
+4 8 4 2
+
+Runs: 25
+Score: 2540
+Moves: 533
+Cells:
+8 32 4 2
+32 256 8 4
+4 8 32 16
+2 64 8 2
+
+Runs: 26
+Score: 820
+Moves: 224
+Cells:
+4 2 4 64
+2 4 16 2
+4 32 2 64
+2 4 8 2
+
+Runs: 27
+Score: 244
+Moves: 77
+Cells:
+2 4 2 8
+32 2 16 2
+8 4 2 4
+2 16 4 2
+
+Runs: 28
+Score: 1348
+Moves: 341
+Cells:
+2 128 8 4
+8 2 32 8
+16 4 64 2
+4 16 8 4
+
+Runs: 29
+Score: 264
+Moves: 86
+Cells:
+2 4 32 2
+16 8 2 8
+4 2 16 2
+2 8 2 4
+
+Runs: 30
+Score: 1224
+Moves: 246
+Cells:
+4 16 2 4
+64 4 8 2
+4 8 128 8
+2 16 8 2
+
+Runs: 31
+Score: 1428
+Moves: 369
+Cells:
+2 16 2 32
+4 128 8 4
+8 4 64 8
+4 32 8 4
+
+Runs: 32
+Score: 1080
+Moves: 283
+Cells:
+2 4 2 16
+4 2 4 8
+8 32 128 4
+2 4 2 32
+
+Runs: 33
+Score: 1708
+Moves: 385
+Cells:
+2 8 16 4
+64 16 64 16
+2 128 32 4
+16 4 8 2
+
+Runs: 34
+Score: 1572
+Moves: 329
+Cells:
+4 2 4 2
+8 4 2 8
+4 16 4 128
+2 128 2 4
+
+Runs: 35
+Score: 1484
+Moves: 388
+Cells:
+2 4 2 16
+32 128 16 4
+8 2 64 32
+2 16 8 4
+
+Runs: 36
+Score: 2404
+Moves: 465
+Cells:
+4 2 32 2
+32 8 256 4
+4 16 2 8
+2 64 8 2
+
+Runs: 37
+Score: 1452
+Moves: 354
+Cells:
+2 64 8 2
+16 4 32 4
+128 16 8 2
+2 8 32 4
+
+Runs: 38
+Score: 1448
+Moves: 351
+Cells:
+2 4 128 4
+16 8 4 16
+2 32 64 32
+8 2 4 2
+
+Runs: 39
+Score: 1304
+Moves: 308
+Cells:
+8 2 8 2
+4 16 128 4
+32 2 64 2
+2 16 8 4
+
+Runs: 40
+Score: 1320
+Moves: 333
+Cells:
+2 128 2 64
+4 16 4 2
+8 32 2 16
+4 16 4 2
+
+Runs: 41
+Score: 1292
+Moves: 290
+Cells:
+2 64 4 2
+4 2 16 4
+128 32 2 8
+16 2 4 2
+
+Runs: 42
+Score: 2120
+Moves: 441
+Cells:
+2 8 16 2
+4 16 32 8
+2 4 256 16
+16 2 16 2
+
+Runs: 43
+Score: 2696
+Moves: 524
+Cells:
+4 8 4 2
+128 256 32 16
+8 4 2 4
+4 2 8 2
+
+Runs: 44
+Score: 1348
+Moves: 335
+Cells:
+2 16 8 2
+4 128 32 4
+8 16 64 8
+4 2 8 4
+
+Runs: 45
+Score: 2060
+Moves: 421
+Cells:
+2 8 2 8
+16 64 128 2
+4 2 32 128
+2 16 4 2
+
+Runs: 46
+Score: 1304
+Moves: 333
+Cells:
+4 8 16 2
+16 32 8 4
+4 128 64 2
+2 8 2 4
+
+Runs: 47
+Score: 620
+Moves: 175
+Cells:
+4 32 4 2
+8 64 8 4
+4 2 32 8
+2 4 2 4
+
+Runs: 48
+Score: 2224
+Moves: 438
+Cells:
+4 8 4 2
+8 16 8 16
+2 256 64 8
+4 8 4 2
+
+Runs: 49
+Score: 2072
+Moves: 372
+Cells:
+2 8 16 4
+16 32 256 2
+2 4 2 16
+4 16 4 2
+
+Runs: 50
+Score: 3124
+Moves: 651
+Cells:
+2 256 8 2
+4 8 32 8
+32 64 8 2
+4 2 128 8
+
+Runs: 51
+Score: 1344
+Moves: 319
+Cells:
+2 16 2 32
+4 128 4 2
+16 2 8 64
+2 16 4 2
+
+Runs: 52
+Score: 1120
+Moves: 288
+Cells:
+2 32 2 8
+4 8 128 4
+8 16 8 2
+2 8 2 32
+
+Runs: 53
+Score: 1420
+Moves: 316
+Cells:
+4 8 4 2
+8 32 128 4
+64 8 32 8
+4 16 8 4
+
+Runs: 54
+Score: 1140
+Moves: 264
+Cells:
+2 4 2 4
+4 2 128 16
+64 4 2 4
+4 8 4 2
+
+Runs: 55
+Score: 1320
+Moves: 331
+Cells:
+2 16 128 2
+16 4 64 4
+4 32 4 2
+2 8 2 16
+
+Runs: 56
+Score: 980
+Moves: 230
+Cells:
+4 2 16 2
+8 64 32 4
+4 16 64 8
+2 4 32 4
+
