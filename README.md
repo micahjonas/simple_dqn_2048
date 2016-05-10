@@ -23,6 +23,12 @@ Is based upon branch v2 but only uses 1 layer of fully connected
 
 Doubles the neurons in the fully connected layer to v4.
 
+## Branch v6
+Idea: CNN: 4x4 with 10000 filters into FNN let neuronal networks choose which positons are important let them build a tuple network
+
+## v7
+v5 double nn again
+
 # Simple DQN
 
 Deep Q-learning agent for replicating DeepMind's results in paper ["Human-level control through deep reinforcement learning"](http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html). It is designed to be simple, fast and easy to extend. In particular:
