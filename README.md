@@ -29,6 +29,15 @@ Idea: CNN: 4x4 with 10000 filters into FNN let neuronal networks choose which po
 ## v7
 v5 double nn again
 
+## v8
+use v5 or v4 and set gamma 1 (not 0.99)
+
+## Future experiments
+bigger cnn (more filters?)
+less random to start with
+gamma = 1
+lower negativ reward for move that does nothing
+
 # Simple DQN
 
 Deep Q-learning agent for replicating DeepMind's results in paper ["Human-level control through deep reinforcement learning"](http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html). It is designed to be simple, fast and easy to extend. In particular:
